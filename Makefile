@@ -1,11 +1,14 @@
+SHELL=/bin/bash
+ISAAC_PATH=/home/egeozgul/Documents/IsaacSim/isaac-sim-standalone-5.0.0-linux-x86_64
+
 run_sim:
-	cd ~/Documents/IsaacSim/isaac-sim-standalone-5.0.0-linux-x86_64/ && ./isaac-sim.sh
+	source /opt/ros/jazzy/setup.bash && $(ISAAC_PATH)/isaac-sim.sh
 
 run_ros:
-	ros2 launch ros/static_tf.launch.py
+	source /opt/ros/jazzy/setup.bash && ros2 launch ros/static_tf.launch.py
 
 rviz:
-	rviz2 -d ros/assessment.rviz
+	source /opt/ros/jazzy/setup.bash && rviz2 -d ros/assessment.rviz
 
 test:
-	python3 sim/test_topics.py
+	source /opt/ros/jazzy/setup.bash && python3 sim/test_topics.py
