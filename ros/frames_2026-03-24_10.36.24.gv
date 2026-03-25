@@ -1,0 +1,10 @@
+digraph G {
+"World" -> "Robot"[label=" Broadcaster: default_authority\nAverage rate: 60.205\nBuffer length: 4.883\nMost recent transform: 88.616669\nOldest transform: 83.73333\n"];
+"World" -> "Base_Link"[label=" Broadcaster: default_authority\nAverage rate: 60.205\nBuffer length: 4.883\nMost recent transform: 88.616669\nOldest transform: 83.73333\n"];
+"World" -> "lidar_frame"[label=" Broadcaster: default_authority\nAverage rate: 60.205\nBuffer length: 4.883\nMost recent transform: 88.616669\nOldest transform: 83.73333\n"];
+"World" -> "camera_frame"[label=" Broadcaster: default_authority\nAverage rate: 60.205\nBuffer length: 4.883\nMost recent transform: 88.616669\nOldest transform: 83.73333\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1774362984.3572621"[ shape=plaintext ] ;
+}->"World";
+}
