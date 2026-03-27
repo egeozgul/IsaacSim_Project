@@ -195,3 +195,13 @@ Implemented in `sim/startup.py`, synchronized with simulation frames:
 5. Validate sensor data against real hardware measurements
 6. Add Nav2 for autonomous navigation
 
+
+## Bandwidth Measurements
+| Topic | Rate | Approx Bandwidth |
+|-------|------|-----------------|
+| /point_cloud | 9 Hz | ~45 MB/min |
+| /camera | 30 Hz | ~1.5 GB/min |
+| /odom | 60 Hz | ~1 MB/min |
+| /tf | 60 Hz | ~2 MB/min |
+
+Note: Use /camera/compressed to reduce camera bandwidth by ~10x
