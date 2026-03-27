@@ -205,3 +205,26 @@ Implemented in `sim/startup.py`, synchronized with simulation frames:
 | /tf | 60 Hz | ~2 MB/min |
 
 Note: Use /camera/compressed to reduce camera bandwidth by ~10x
+
+---
+
+## Screenshots
+
+### Full Isaac Sim Scene
+![Isaac Sim Scene](media/isaacsim_fullscreenshot.png)
+
+### Viewport View
+![Viewport](media/viewport_screenshot.png)
+
+### Action Graph (ROS2_Graph)
+![Action Graph](media/actiongraphs_screenshot.png)
+
+### LiDAR Point Cloud in RViz
+![LiDAR Scan](media/lidarscan_screenshot.png)
+
+### Camera Feed
+![Camera](media/camera_screenshot.png)
+
+### Full RViz Visualization
+![RViz](media/rviz_screenshot.png)
+
