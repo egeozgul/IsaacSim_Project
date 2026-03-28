@@ -1,4 +1,7 @@
 # Isaac Sim + ROS2 Assessment
+![Isaac Sim Scene](media/isaacsim_fullscreenshot.png)
+
+
 ## Isaac Sim 5.0.0 | Ubuntu 24.04 | ROS2 Jazzy
 
 ---
