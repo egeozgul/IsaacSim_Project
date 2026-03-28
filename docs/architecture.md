@@ -2,40 +2,40 @@
 
 ## Data Flow
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    Isaac Sim 5.0.0                       │
-│                                                         │
+┌────────────────────────────────────────────────────┐
+│                    Isaac Sim 5.0.0                          │
+│                                                             │
 │  ┌─────────────┐    ┌──────────────┐                   │
-│  │ Custom USD  │    │ Action Graph │                   │
-│  │   Scene     │───▶│  ROS2_Graph  │                   │
-│  │             │    │              │                   │
-│  │ • Robot     │    │ • Clock pub  │                   │
-│  │ • LiDAR     │    │ • LiDAR pub  │                   │
-│  │ • Camera    │    │ • Camera pub │                   │
-│  │ • Objects   │    │ • Odom pub   │                   │
-│  │ • Lights    │    │ • TF pub     │                   │
+│  │ Custom USD     │    │ Action Graph   │                   │
+│  │   Scene        │──▶│  ROS2_Graph    │                   │
+│  │                │    │                │                   │
+│  │ • Robot        │    │ • Clock pub    │                   │
+│  │ • LiDAR        │    │ • LiDAR pub    │                   │
+│  │ • Camera       │    │ • Camera pub   │                   │
+│  │ • Objects      │    │ • Odom pub     │                   │
+│  │ • Lights       │    │ • TF pub       │                   │
 │  └─────────────┘    └──────┬───────┘                   │
-│                             │                           │
-│              ROS2 Bridge    │                           │
-│         (isaacsim.ros2.bridge)                         │
-└─────────────────────────────┼───────────────────────────┘
-                              │
-                    ROS2 Jazzy Topics
-                              │
+│                                │                            │
+│              ROS2 Bridge       │                            │
+│         (isaacsim.ros2.bridge)                              │
+└────────────────────────────┼──────────────────────┘
+                                   │
+                          ROS2 Jazzy Topics
+                                  │
           ┌───────────────────┼───────────────────┐
-          │                   │                   │
-     /point_cloud         /camera              /tf
-     /clock               /odom             /tf_static
-          │                   │                   │
+          │                       │                      │
+     /point_cloud             /camera                   /tf
+     /clock                    /odom                 /tf_static
+          │                       │                      │
           └───────────────────┼───────────────────┘
-                              │
-                           RViz2
-                              │
+                                  │
+                                RViz2
+                                  │
                     ┌─────────────────┐
-                    │ • PointCloud2   │
-                    │ • Image         │
-                    │ • TF frames     │
-                    │ • Odometry      │
+                    │ • PointCloud2.     │
+                    │ • Image            │
+                    │ • TF frames        │
+                    │ • Odometry         │
                     └─────────────────┘
 ```
 
@@ -55,13 +55,13 @@ World
 ```
 Every 300 frames (~5 seconds):
 ┌─────────────────────────────────┐
-│  DomeLight intensity            │
-│  500 ──────────────────▶ 3000  │
-│                                 │
-│  LiDAR azimuth noise std        │
-│  0.01 ─────────────────▶ 0.05  │
-│                                 │
-│  LiDAR elevation noise std      │
-│  0.01 ─────────────────▶ 0.05  │
+│  DomeLight intensity                  │
+│  500 ──────────────────▶ 3000     │
+│                                       │
+│  LiDAR azimuth noise std              │
+│  0.01 ─────────────────▶ 0.05      │
+│                                       │
+│  LiDAR elevation noise std            │
+│  0.01 ─────────────────▶ 0.05      │
 └─────────────────────────────────┘
 ```
