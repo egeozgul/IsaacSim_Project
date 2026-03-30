@@ -2,24 +2,24 @@
 
 ## Data Flow
 ```
-┌───────────────────────────────────────────────────┐
-│                    Isaac Sim 5.0.0                │
-│                                                   │
-│  ┌─────────────┐    ┌──────────────┐              │
-│  │ Custom USD  │    │ Action Graph │              │
-│  │   Scene     │─▶ │   ROS2_Graph │              │
-│  │             │    │              │              │
-│  │ • Robot     │    │ • Clock pub  │              │
-│  │ • LiDAR     │    │ • LiDAR pub  │              │
-│  │ • Camera    │    │ • Camera pub │              │
-│  │ • Objects   │    │ • Odom pub   │              │
-│  │ • Lights    │    │ • TF pub     │              │
-│  └─────────────┘    └──────┬───────┘              │
-│                            │                      │
-│          ROS2 Bridge       │                      │
-│     (isaacsim.ros2.bridge) |                      │
-└────────────────────────────┼──────────────────────┘
-                             │
+ ┌───────────────────────────────────────────────────┐
+ │                    Isaac Sim 5.0.0                │
+ │                                                   │
+ │  ┌─────────────┐    ┌──────────────┐              │
+ │  │ Custom USD  │    │ Action Graph │              │
+ │  │   Scene     │--> │   ROS2_Graph │              │
+ │  │             │    │              │              │
+ │  │ • Robot     │    │ • Clock pub  │              │
+ │  │ • LiDAR     │    │ • LiDAR pub  │              │
+ │  │ • Camera    │--> │ • Camera pub │              │
+ │  │ • Objects   │    │ • Odom pub   │              │
+ │  │ • Lights    │    │ • TF pub     │              │
+ │  └─────────────┘    └──────┬───────┘              │
+ │                            │                      │
+ │          ROS2 Bridge       │                      │
+ │     (isaacsim.ros2.bridge) |                      │
+ └────────────────────────────┼──────────────────────┘
+                              │
                       ROS2 Jazzy Topics
                               │
           ┌───────────────────┼───────────────────┐
@@ -56,12 +56,12 @@ World
 some noise is applied on camera frames and lidar data at each frame
 ┌─────────────────────────────────┐
 │  DomeLight intensity            │
-│  500 ──────────────────▶ 3000  │
+│  500 ──────────────────> 3000   │
 │                                 │
 │  LiDAR azimuth noise std        │
-│  0.01 ─────────────────▶ 0.05  │
+│  0.01 ─────────────────> 0.05   │
 │                                 │
 │  LiDAR elevation noise std      │
-│  0.01 ─────────────────▶ 0.05  │
+│  0.01 ─────────────────> 0.05   │
 └─────────────────────────────────┘
 ```
