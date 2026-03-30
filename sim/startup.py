@@ -1,3 +1,14 @@
+# =============================================================================
+# domain_rand_loop.py
+#
+# Runs continuously in Isaac Sim, randomizing dome light intensity and LiDAR
+# noise every 300 frames to simulate domain randomization during training.
+#
+# Input:  Isaac Sim stage prims — DomeLight, stereo camera, and rotary LiDAR
+# Output: Randomized intensity on /World/DomeLight and azimuth/elevation noise
+#         on the LiDAR; render products bound to ROS2 camera and LiDAR helpers
+# =============================================================================
+
 async def domain_rand_loop():
     import omni.usd
     import omni.replicator.core as rep
