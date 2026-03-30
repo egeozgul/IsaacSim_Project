@@ -1,3 +1,14 @@
+# =============================================================================
+# topic_tester.py
+#
+# Subscribes to required ROS 2 topics for 5 seconds and checks that each
+# meets a minimum publish rate. Prints a pass/fail report and exits.
+#
+# Input:  /point_cloud (3 Hz), /camera (10 Hz), /tf (30 Hz),
+#         /odom (3 Hz), /clock (30 Hz)
+# Output: Console smoke test report; exits 0 if all pass, 1 if any fail
+# =============================================================================
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import PointCloud2, Image
