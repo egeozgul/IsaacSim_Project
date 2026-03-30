@@ -140,7 +140,7 @@ After launching Isaac Sim:
 | ROS2 Topic | `/point_cloud` |
 | Message Type | `sensor_msgs/PointCloud2` |
 
-### Bumblebee Stereo Camera
+### RGB Camera
 | Parameter | Value |
 |-----------|-------|
 | Resolution | 640x480 |
