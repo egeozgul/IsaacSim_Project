@@ -1,3 +1,13 @@
+# =============================================================================
+# square_path.py
+#
+# Drives a 4-wheeled robot in a square by alternating forward motion and
+# 90-degree turns four times, then stops.
+#
+# Input:  /World/Robot wheel joints via UsdPhysics DriveAPI (Isaac Sim stage)
+# Output: Angular velocity commands to front/rear left and right wheel joints
+# =============================================================================
+
 async def square_path():
     import omni.usd
     from pxr import UsdPhysics
