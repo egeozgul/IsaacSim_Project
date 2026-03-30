@@ -1,3 +1,14 @@
+# =============================================================================
+# domain_rand_checker.py
+#
+# Listens to LiDAR and camera topics for 10 seconds, then checks whether
+# camera brightness varies enough (std > 5.0) to confirm lighting
+# randomization is active. Prints a pass/fail report and shuts down.
+#
+# Input:  /point_cloud (PointCloud2), /camera (Image)
+# Output: Console report of message counts and brightness variance
+# =============================================================================
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import PointCloud2, Image
