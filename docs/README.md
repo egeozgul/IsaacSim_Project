@@ -1,4 +1,4 @@
-# Isaac Sim + ROS2 Assessment
+# Isaac Sim + ROS2
 ![Isaac Sim Scene](media/isaacsim_fullscreenshot.png)
 
 
